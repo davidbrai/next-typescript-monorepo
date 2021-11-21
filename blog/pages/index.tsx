@@ -26,7 +26,7 @@ const BlogIndex: NextPage<Props> = ({ posts }) => {
 };
 
 BlogIndex.getInitialProps = async () => {
-  const posts = [{ id: 1, title: "abcd" }]; //await apiClient.posts.getListing();
+  const posts = [{ id: "1", title: "abcd", content: "text" }]; //await apiClient.posts.getListing();
   return { posts };
 };
 
