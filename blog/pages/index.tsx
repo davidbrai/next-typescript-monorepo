@@ -13,7 +13,7 @@ const BlogIndex: NextPage<Props> = ({ posts }) => {
   return (
     <Layout>
       <ul>
-        {posts.map(post => (
+        {posts.map((post) => (
           <li key={post.id}>
             <Link passHref href={`/${post.id}`}>
               <a>{post.title}</a>
@@ -26,7 +26,7 @@ const BlogIndex: NextPage<Props> = ({ posts }) => {
 };
 
 BlogIndex.getInitialProps = async () => {
-  const posts = await apiClient.posts.getListing();
+  const posts = [{ id: 1, title: "abcd" }]; //await apiClient.posts.getListing();
   return { posts };
 };
 
